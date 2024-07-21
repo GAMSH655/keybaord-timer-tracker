@@ -1,0 +1,13 @@
+.correct{
+  color: green;
+}
+.wrong{
+  color: red;
+}
+.text{
+  color: darkgoldenrod;
+}
+input{
+  border: none;
+  outline: none;
+}
