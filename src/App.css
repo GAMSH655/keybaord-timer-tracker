@@ -1,3 +1,12 @@
+*{
+  padding: 0px;
+  margin: 0px;
+ 
+}
+body{
+  overflow-x: hidden;
+}
+
 .correct{
   color: green;
 }
@@ -6,8 +15,50 @@
 }
 .text{
   color: darkgoldenrod;
+  color: red;
+  text-wrap: wrap;
+  overflow: hidden;
+}
+.inputDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .centeredScreen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 input{
   border: none;
   outline: none;
+  width: 70%;
+  color: black;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+.count{
+  text-align: center;
+  font-size: 2rem;
+}
+select{
+  color: black;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+.textScreen{
+  width: 1000px;;
+  height: 500px;
+  background-color: antiquewhite;
+  color: black;
+}
+@media only screen and (max-width:768px) {
+  .textScreen{
+    width:100%;
+    height: 500px;
+    background-color: antiquewhite;
+    color: black;
+    padding: 10px;
+    text-wrap: wrap;
+  }
 }
