@@ -33,10 +33,10 @@ body{
   justify-content: center;
   align-items: center;
 }
-input{
+.textInput{
   border: none;
   outline: none;
-  width: 70%;
+  width: 50%;
   color: black;
   background-color: antiquewhite;
   padding: 10px;
@@ -45,10 +45,13 @@ input{
   text-align: center;
   font-size: 2rem;
 }
-select{
+.textLenght , .textTime{
   color: black;
   background-color: antiquewhite;
   padding: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 80px;
 }
 .textScreen{
   width: 1000px;;
@@ -64,5 +67,8 @@ select{
     color: black;
     padding: 10px;
     text-wrap: wrap;
+  }
+  .inputDiv{
+    flex-wrap: wrap;
   }
 }
