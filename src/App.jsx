@@ -1,16 +1,31 @@
-import { useState } from 'react'
+import { useState  , useEffect} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [text , setText] = useState("")
- 
+  const [initialTimer, setinitialTimer] = useState(0)
   const HandleInput =(e)=>{
        setText(e.target.value)
   }
- 
-  const lenthTimer = 360;
+
+useEffect(()=>{
+  let interval = null ;
+    if (HandleInput){
+      interval = setInterval(()=>{
+        setinitialTimer(prevTime=> prevTime + 10 ) 
+      } , 100)
+    } else{
+      clearInterval(interval)
+    }
+    return ()=> clearInterval(interval)
+})
+
+
+
+
+  const lenghtTimer = 360;
   return (
     <> 
      <div className="app">
@@ -24,8 +39,14 @@ function App() {
         </optgroup>
       </select>
       </div>
-<p className='count'>{text.length} </p>
-<p className='count'>{text.length == lenthTimer ? ( <p> lenth is greather length</p>) : ""} </p>
+     
+<p className='count'> {text.length} </p>
+<div  className='timer'>
+        {/* <span>{("0" + Math.floor(initialTimer/6000) % 60 ).slice(-2)}</span>: */}
+        <span >{("0" + Math.floor(initialTimer/1000) % 60 ).slice(-2)}</span>:
+        <span >{("0" +  ((initialTimer/10) % 100)).slice(-2)}</span>
+      </div>
+<p className='count'>{text.length == lenghtTimer ? ( <p>  text lenght is greather than word</p>) : ""} </p>
       <div className="centeredScreen">
       <div className="textScreen">
       <p className='text'>{text} <br /> </p>

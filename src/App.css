@@ -19,6 +19,10 @@ body{
   text-wrap: wrap;
   overflow: hidden;
 }
+.timer{
+  text-align: center;
+  font-size: 2rem;
+}
 .inputDiv {
   display: flex;
   justify-content: center;
